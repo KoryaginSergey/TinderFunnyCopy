@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		635387D92716FD73002A67C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635387D72716FD73002A67C7 /* Main.storyboard */; };
 		635387DB2716FD74002A67C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635387DA2716FD74002A67C7 /* Assets.xcassets */; };
 		635387DE2716FD74002A67C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635387DC2716FD74002A67C7 /* LaunchScreen.storyboard */; };
+		635387F427170B1C002A67C7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 635387F327170B1C002A67C7 /* Moya */; };
+		63538818271727EA002A67C7 /* MainScreen in Resources */ = {isa = PBXBuildFile; fileRef = 63538817271727EA002A67C7 /* MainScreen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		635387DA2716FD74002A67C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		635387DD2716FD74002A67C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635387DF2716FD74002A67C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63538817271727EA002A67C7 /* MainScreen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MainScreen; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635387F427170B1C002A67C7 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				635387DA2716FD74002A67C7 /* Assets.xcassets */,
 				635387DC2716FD74002A67C7 /* LaunchScreen.storyboard */,
 				635387DF2716FD74002A67C7 /* Info.plist */,
+				63538817271727EA002A67C7 /* MainScreen */,
 			);
 			path = TinderFunnyCopy;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = TinderFunnyCopy;
+			packageProductDependencies = (
+				635387F327170B1C002A67C7 /* Moya */,
+			);
 			productName = TinderFunnyCopy;
 			productReference = 635387CE2716FD73002A67C7 /* TinderFunnyCopy.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 635387C52716FD73002A67C7;
+			packageReferences = (
+				635387F227170B1C002A67C7 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 635387CF2716FD73002A67C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +138,7 @@
 				635387DE2716FD74002A67C7 /* LaunchScreen.storyboard in Resources */,
 				635387DB2716FD74002A67C7 /* Assets.xcassets in Resources */,
 				635387D92716FD73002A67C7 /* Main.storyboard in Resources */,
+				63538818271727EA002A67C7 /* MainScreen in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		635387F227170B1C002A67C7 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		635387F327170B1C002A67C7 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635387F227170B1C002A67C7 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 635387C62716FD73002A67C7 /* Project object */;
 }
