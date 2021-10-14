@@ -3,8 +3,6 @@
 //  TinderFunnyCopy
 //
 //  Created by macuser on 13.10.2021.
-//  
-//
 
 import UIKit
 
@@ -12,10 +10,13 @@ import UIKit
 // MARK: - MainScreenCollectionViewCell
 class MainScreenCollectionViewCell: UICollectionViewCell {
   
+  @IBOutlet weak var viewCell: UIView!
   weak var delegate: MainScreenCellDelegate?
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    
+    viewCell.backgroundColor = myBlueColor
   }
   
   // MARK: - IBAction

@@ -3,8 +3,6 @@
 //  TinderFunnyCopy
 //
 //  Created by macuser on 13.10.2021.
-//  
-//
 
 import UIKit
 

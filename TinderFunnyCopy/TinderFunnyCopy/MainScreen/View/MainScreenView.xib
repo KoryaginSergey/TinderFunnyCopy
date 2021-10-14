@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2wu-us-T0v">
-                    <rect key="frame" x="0.0" y="100" width="320" height="368"/>
+                    <rect key="frame" x="0.0" y="130" width="320" height="308"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VZR-bR-fJa">
                         <size key="itemSize" width="128" height="128"/>
@@ -24,14 +24,36 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zm-hF-wZC">
+                    <rect key="frame" x="0.0" y="40" width="320" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="p0z-3b-ipm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmZ-yw-Tu8">
+                    <rect key="frame" x="0.0" y="438" width="320" height="130"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="oHT-w0-QkE"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Mzc-ku-3zY"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Mzc-ku-3zY" firstAttribute="bottom" secondItem="2wu-us-T0v" secondAttribute="bottom" constant="100" id="d2o-mk-OZd"/>
+                <constraint firstItem="6zm-hF-wZC" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" id="89z-9h-FHW"/>
+                <constraint firstItem="zmZ-yw-Tu8" firstAttribute="top" secondItem="2wu-us-T0v" secondAttribute="bottom" id="NW3-g6-TnR"/>
+                <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="6zm-hF-wZC" secondAttribute="trailing" id="VEx-Jx-CaS"/>
+                <constraint firstItem="2wu-us-T0v" firstAttribute="top" secondItem="6zm-hF-wZC" secondAttribute="bottom" constant="40" id="ZcT-ib-omT"/>
+                <constraint firstItem="zmZ-yw-Tu8" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" id="eHx-eL-At7"/>
+                <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="zmZ-yw-Tu8" secondAttribute="trailing" id="egu-F2-XGe"/>
+                <constraint firstItem="6zm-hF-wZC" firstAttribute="top" secondItem="Mzc-ku-3zY" secondAttribute="top" constant="40" id="epJ-GR-9fc"/>
                 <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="2wu-us-T0v" secondAttribute="trailing" id="i9t-6P-agu"/>
-                <constraint firstItem="2wu-us-T0v" firstAttribute="top" secondItem="Mzc-ku-3zY" secondAttribute="top" constant="100" id="oSf-q5-Kpu"/>
                 <constraint firstItem="2wu-us-T0v" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" id="uow-AA-NUM"/>
+                <constraint firstItem="zmZ-yw-Tu8" firstAttribute="bottom" secondItem="Mzc-ku-3zY" secondAttribute="bottom" id="xm0-Dv-j0N"/>
             </constraints>
             <connections>
                 <outlet property="collectionView" destination="2wu-us-T0v" id="NrR-yU-eFl"/>

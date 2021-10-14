@@ -10,16 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainScreenCollectionViewCell" reuseIdentifier="MainScreenCollectionViewCell" id="Stz-LZ-OW2" customClass="MainScreenCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="378" height="453"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainScreenCollectionViewCell" reuseIdentifier="MainScreenCollectionViewCell" id="Stz-LZ-OW2" customClass="MainScreenCollectionViewCell" customModule="TinderFunnyCopy">
+            <rect key="frame" x="0.0" y="0.0" width="563" height="807"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ayI-mY-T1h">
-                <rect key="frame" x="0.0" y="0.0" width="378" height="453"/>
+                <rect key="frame" x="0.0" y="0.0" width="563" height="807"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nn4-0E-6m8">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="453"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="563" height="807"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                 </subviews>
                 <constraints>
@@ -29,13 +29,16 @@
                     <constraint firstAttribute="trailing" secondItem="nn4-0E-6m8" secondAttribute="trailing" id="rZt-FK-tMB"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="378" height="453"/>
-            <point key="canvasLocation" x="-836" y="-313"/>
+            <size key="customSize" width="563" height="807"/>
+            <connections>
+                <outlet property="viewCell" destination="nn4-0E-6m8" id="Y6u-vY-5C0"/>
+            </connections>
+            <point key="canvasLocation" x="-1420" y="-332"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

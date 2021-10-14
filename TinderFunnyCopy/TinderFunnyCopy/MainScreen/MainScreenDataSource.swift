@@ -3,8 +3,6 @@
 //  TinderFunnyCopy
 //
 //  Created by macuser on 13.10.2021.
-//  
-//
 
 import UIKit
 
@@ -31,11 +29,11 @@ class MainScreenDataSource: NSObject, UICollectionViewDataSource {
   
   // MARK: - UICollectionViewDataSource
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 5
+    return 15
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainScreenCollectionViewCell", for: indexPath) 
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainScreenCollectionViewCell", for: indexPath)
     return cell
   }
 }
