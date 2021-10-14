@@ -8,30 +8,25 @@
 
 import UIKit
 
+
 // MARK: - MainScreenCollectionViewCell
-
 class MainScreenCollectionViewCell: UICollectionViewCell {
-
-    weak var delegate: MainScreenCellDelegate?
-    
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    // MARK: - IBAction
-
-    @IBAction func someButtonAction() {
-        self.delegate?.cellDidTapSomeButton(cell: self)
-    }
+  
+  weak var delegate: MainScreenCellDelegate?
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  // MARK: - IBAction
+  @IBAction func someButtonAction() {
+    self.delegate?.cellDidTapSomeButton(cell: self)
+  }
 }
 
-
 // MARK: - MainScreenCellDelegate
-
 protocol MainScreenCellDelegate: NSObjectProtocol {
-
-    /** Delegate method example */
-    func cellDidTapSomeButton(cell: MainScreenCollectionViewCell)
+  /** Delegate method example */
+  func cellDidTapSomeButton(cell: MainScreenCollectionViewCell)
 }
 
