@@ -53,22 +53,18 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
 
         self.customView.delegate = self
-        self.connectTableViewDependencies()
+        self.connectCollectionViewDependencies()
     }
 
     private func connectCollectionViewDependencies() {
 
         self.customView.collectionView.delegate = self
-        self.dataSource.registerNibsForCollectionView(tableView: self.customView.collectionView)
+        self.dataSource.registerNibsForCollectionView(collectionView: self.customView.collectionView)
         self.customView.collectionView.dataSource = self.dataSource
     }
 
     // MARK: - Collection view delegate
 
-    func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath) {
-
-      collectionView.deselectRow(at: indexPath, animated: true)
-    }
 }
 
 // MARK: - MainScreenViewDelegate
@@ -91,6 +87,6 @@ extension MainScreenViewController: MainScreenModelDelegate {
 
 extension MainScreenViewController: MainScreenCellDelegate {
 
-    func cellDidTapSomeButton(cell: MainScreenTableViewCell) {
+    func cellDidTapSomeButton(cell: MainScreenCollectionViewCell) {
     }
 }

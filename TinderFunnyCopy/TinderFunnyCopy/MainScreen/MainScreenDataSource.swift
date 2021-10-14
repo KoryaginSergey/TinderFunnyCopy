@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - MainScreenDataSource
 
-class MainScreenDataSource: NSObject, UITableViewDataSource {
+class MainScreenDataSource: NSObject, UICollectionViewDataSource {
 
     weak var cellDelegate: MainScreenCellDelegate?
     private let model: MainScreenModelProtocol
@@ -19,35 +19,46 @@ class MainScreenDataSource: NSObject, UITableViewDataSource {
         self.model = model
     }
 
-    func registerNibsForTableView(tableView: UITableView) {
-        MainScreenTableViewCell.register(for:tableView)
+    func registerNibsForCollectionView(collectionView: UICollectionView) {
+        MainScreenCollectionViewCell.register(for: collectionView)
+      
     }
 
     // MARK: - Private methods
 
-    func configure(cell: MainScreenTableViewCell, forItem item: String) {
-        cell.titleLabel.text = item
+    func configure(cell: MainScreenCollectionViewCell, forItem item: String) {
+//        cell.collectionLabel.text = item
     }
 
-    // MARK: - UITableViewDataSource
+    // MARK: - UICollectionViewDataSource
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 5
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainScreenCollectionViewCell", for: indexPath) 
+    
+    return cell
+  }
 
-    internal func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.model.items.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.deque(for: indexPath) as MainScreenTableViewCell
-        cell.delegate = cellDelegate
-
-        let testItem = self.model.items[indexPath.row];
-        self.configure(cell: cell, forItem: testItem)
-
-        return cell
-    }
+//    internal func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfRowsInSection section: Int) -> Int {
+//        return self.model.items.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let cell = collectionView.deque(for: indexPath) as MainScreenCollectionViewCell
+//        cell.delegate = cellDelegate
+//
+//        let testItem = self.model.items[indexPath.row];
+//        self.configure(cell: cell, forItem: testItem)
+//
+//        return cell
+//    }
 }
 
