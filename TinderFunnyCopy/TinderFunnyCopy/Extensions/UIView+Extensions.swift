@@ -28,7 +28,7 @@ extension UIView {
     return contentView
   }
   
-  public func layoutAttachAll(to childView:UIView) {
+  public func layoutAttachAll(to childView: UIView) {
     var constraints = [NSLayoutConstraint]()
     
     childView.translatesAutoresizingMaskIntoConstraints = false

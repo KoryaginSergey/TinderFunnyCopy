@@ -29,12 +29,13 @@ class MainScreenDataSource: NSObject, UICollectionViewDataSource {
   
   // MARK: - UICollectionViewDataSource
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 15
+    return 28
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainScreenCollectionViewCell", for: indexPath)
     return cell
   }
+
 }
 
