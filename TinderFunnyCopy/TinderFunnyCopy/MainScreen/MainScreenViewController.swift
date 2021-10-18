@@ -5,6 +5,7 @@
 //  Created by macuser on 13.10.2021.
 
 import UIKit
+import Alamofire
 
 
 // MARK: - MainScreenViewController
@@ -50,6 +51,10 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate {
     
     self.customView.delegate = self
     self.connectCollectionViewDependencies()
+    
+    
+    PostServices.shared.fetchRequest()
+    
   }
   
   private func connectCollectionViewDependencies() {
