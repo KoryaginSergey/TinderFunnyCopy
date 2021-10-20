@@ -44,6 +44,9 @@ class MainScreenView: UIView, MainScreenViewProtocol{
     super.awakeFromNib()
     setupUI()
     setValuesMainScreenView()
+    
+//    collectionView.collectionViewLayout = 
+    
   }
 }
 
@@ -68,7 +71,6 @@ private extension MainScreenView {
     rightCircleView.backgroundColor = myRedColor
     rightCircleImage.image = UIImage(named: "Heart")?.withTintColor(.white)
     leftCircleImage.image = UIImage(named: "Cross")
-    collectionView.layer.cornerRadius = 15
   }
   
   func setValuesMainScreenView() {
