@@ -16,9 +16,9 @@ struct PostServices {
   
   
   
-  let urlString: URL = URL(string: "https://randomuser.me/api/?page=3&results=10&seed=abc")!
+  let urlString: URL = URL(string: "https://randomuser.me/api/?page=1&results=1&seed=abc")!
   
-//  https://habr.com/ru/post/330760/
+  //  https://habr.com/ru/post/330760/
   
   
   
@@ -33,12 +33,27 @@ struct PostServices {
   //  }
   
   
+  let params: [String: Any] = [
+      "page": 1,
+      "results": 1
+  ]
+  
+  
   
   func fetchRequest() {
     
-    AF.request("https://randomuser.me/api/?page=3&results=10&seed=abc", method: .get).responseJSON { response in
-      print(response)
-      print("Hello")
+    AF.request("https://randomuser.me/api/", method: .get, parameters: params).validate().responseJSON { responseJSON in
+//      print(responseJSON)
+      
+      guard let statusCode = responseJSON.response?.statusCode else { return }
+      print("statusCode: ", statusCode)
+      
+      switch responseJSON.result {
+      case .success(let value):
+        print(value)
+      case .failure(let error):
+        print(error)
+      }
     }
   }
   

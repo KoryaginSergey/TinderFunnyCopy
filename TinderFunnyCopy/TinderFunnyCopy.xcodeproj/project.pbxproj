@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63340D3E2720649F00312EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63340D3D2720649F00312EC0 /* LocationManager.swift */; };
 		6339195627199E4D00CE1AFB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339195527199E4D00CE1AFB /* Models.swift */; };
 		633C2582271DA01800193CE0 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C2581271DA01800193CE0 /* PostServices.swift */; };
 		635387D22716FD73002A67C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635387D12716FD73002A67C7 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63340D3D2720649F00312EC0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6339195527199E4D00CE1AFB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		633C2581271DA01800193CE0 /* PostServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
 		635387CE2716FD73002A67C7 /* TinderFunnyCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderFunnyCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63340D382720625D00312EC0 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				63340D3D2720649F00312EC0 /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 		633C2580271D9BE600193CE0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		635387D02716FD73002A67C7 /* TinderFunnyCopy */ = {
 			isa = PBXGroup;
 			children = (
+				63340D382720625D00312EC0 /* LocationManager */,
 				633C2580271D9BE600193CE0 /* Networking */,
 				843D4B78271845D7006ECDBA /* Extensions */,
 				843D4B6327183518006ECDBA /* MainScreen */,
@@ -220,6 +231,7 @@
 				635387D42716FD73002A67C7 /* SceneDelegate.swift in Sources */,
 				843D4B7327183518006ECDBA /* MainScreenView.swift in Sources */,
 				843D4B7427183518006ECDBA /* MainScreenViewController.swift in Sources */,
+				63340D3E2720649F00312EC0 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
