@@ -14,8 +14,8 @@ import Foundation
 //   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
 // MARK: - Welcome
-struct Welcome: Codable {
-  let results: [Result]?
+struct ModelRequest: Codable {
+  let models: [Model]?
   let info: Info?
 }
 
@@ -27,7 +27,7 @@ struct Info: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Model: Codable {
   let gender: String?
   let name: Name?
   let location: Location?

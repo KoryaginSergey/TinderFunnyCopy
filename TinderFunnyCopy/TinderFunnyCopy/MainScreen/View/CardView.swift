@@ -10,6 +10,14 @@ import UIKit
 
 class CardView: SwipeableView {
   
+  
+  
+  
+  
+  
+  
+  
+  
   /// Shadow View
   private weak var shadowView: UIView?
   
@@ -18,7 +26,7 @@ class CardView: SwipeableView {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    backgroundColor = .red
+    backgroundColor = myBlueColor
     layer.cornerRadius = 14
   }
   

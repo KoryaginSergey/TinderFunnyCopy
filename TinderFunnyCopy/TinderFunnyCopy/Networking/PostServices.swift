@@ -8,14 +8,16 @@
 import Foundation
 import Alamofire
 
+//enum Result<T> {
+//  case success(T)
+//  case failure(Error)
+//}
+
 
 struct PostServices {
   
   static let shared = PostServices()
-  
-  
-  
-  
+
   let urlString: URL = URL(string: "https://randomuser.me/api/?page=1&results=1&seed=abc")!
   
   //  https://habr.com/ru/post/330760/
@@ -35,28 +37,36 @@ struct PostServices {
   
   let params: [String: Any] = [
       "page": 1,
-      "results": 1
+      "results": 8
   ]
   
+//  func fetchRequest() {
+//
+//    AF.request("https://randomuser.me/api/", method: .get, parameters: params).validate().responseJSON { responseJSON in
+////      print(responseJSON)
+//
+//      guard let statusCode = responseJSON.response?.statusCode else { return }
+//      print("statusCode: ", statusCode)
+//
+//      switch responseJSON.result {
+//      case .success(let value):
+//        print(value)
+//      case .failure(let error):
+//        print(error)
+//      }
+//    }
+//  }
   
-  
-  func fetchRequest() {
-    
-    AF.request("https://randomuser.me/api/", method: .get, parameters: params).validate().responseJSON { responseJSON in
-//      print(responseJSON)
-      
-      guard let statusCode = responseJSON.response?.statusCode else { return }
-      print("statusCode: ", statusCode)
-      
-      switch responseJSON.result {
-      case .success(let value):
-        print(value)
-      case .failure(let error):
-        print(error)
-      }
+  func fetchRequest(completion: @escaping ([Model]?) -> Void) {
+    AF.request("https://randomuser.me/api/", method: .get, parameters: params).validate().responseData { (response) in
+      switch response.result {
+            case .success(let data):
+              let object = try? JSONDecoder().decode(ModelRequest.self, from: data)
+              print("")
+              completion(object?.models)
+            case .failure(let error):
+              print(error)
+            }
     }
   }
-  
-  
-  
 }

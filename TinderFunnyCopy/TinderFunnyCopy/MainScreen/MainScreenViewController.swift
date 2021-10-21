@@ -12,6 +12,7 @@ import Alamofire
 class MainScreenViewController: UIViewController {
   
   var model: MainScreenModelProtocol
+  var modelUsers: [Model] = []
   
   fileprivate var tempView: MainScreenViewProtocol?
   var customView: MainScreenViewProtocol! {
@@ -47,7 +48,13 @@ class MainScreenViewController: UIViewController {
     super.viewDidLoad()
     
     self.customView.delegate = self
-    PostServices.shared.fetchRequest()
+    
+    
+    PostServices.shared.fetchRequest { (modelUser) in
+
+      print("success")
+    }
+  
   }
   
   // MARK: - Collection view delegate
@@ -69,7 +76,7 @@ extension MainScreenViewController: MainScreenModelDelegate {
 extension MainScreenViewController: SwipeableCardViewDataSource {
     
     func numberOfCards() -> Int {
-        5
+      5
     }
     
     func card(forItemAtIndex index: Int) -> SwipeableView {

@@ -13,8 +13,19 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="TinderFunnyCopy" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="410" height="581"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Omu-hI-a5e">
+                    <rect key="frame" x="0.0" y="0.0" width="410" height="581"/>
+                </imageView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Omu-hI-a5e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BMn-gj-lbi"/>
+                <constraint firstAttribute="trailing" secondItem="Omu-hI-a5e" secondAttribute="trailing" id="CwW-Qt-c8n"/>
+                <constraint firstItem="Omu-hI-a5e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J3s-Hk-2JX"/>
+                <constraint firstAttribute="bottom" secondItem="Omu-hI-a5e" secondAttribute="bottom" id="RKF-YK-pRK"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="134.78260869565219" y="228.01339285714283"/>
         </view>
