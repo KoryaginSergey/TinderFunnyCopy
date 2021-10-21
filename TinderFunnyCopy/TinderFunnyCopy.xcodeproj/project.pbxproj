@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523AB3DC98051D57FCE35EB1 /* Pods_TinderFunnyCopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B53F5ACCD012FB3CFEB89B /* Pods_TinderFunnyCopy.framework */; };
 		63340D3E2720649F00312EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63340D3D2720649F00312EC0 /* LocationManager.swift */; };
 		6339195627199E4D00CE1AFB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339195527199E4D00CE1AFB /* Models.swift */; };
 		633C2582271DA01800193CE0 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C2581271DA01800193CE0 /* PostServices.swift */; };
@@ -16,15 +17,25 @@
 		635387DE2716FD74002A67C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635387DC2716FD74002A67C7 /* LaunchScreen.storyboard */; };
 		635387F427170B1C002A67C7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 635387F327170B1C002A67C7 /* Moya */; };
 		843D4B6D27183518006ECDBA /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6427183518006ECDBA /* MainScreenModel.swift */; };
-		843D4B6E27183518006ECDBA /* MainScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6527183518006ECDBA /* MainScreenDataSource.swift */; };
 		843D4B6F27183518006ECDBA /* MainScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6627183518006ECDBA /* MainScreenBuilder.swift */; };
 		843D4B7027183518006ECDBA /* MainScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843D4B6827183518006ECDBA /* MainScreenView.xib */; };
-		843D4B7127183518006ECDBA /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6927183518006ECDBA /* MainScreenCollectionViewCell.swift */; };
-		843D4B7227183518006ECDBA /* MainScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843D4B6A27183518006ECDBA /* MainScreenCollectionViewCell.xib */; };
 		843D4B7327183518006ECDBA /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6B27183518006ECDBA /* MainScreenView.swift */; };
 		843D4B7427183518006ECDBA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6C27183518006ECDBA /* MainScreenViewController.swift */; };
 		843D4B7A271845D8006ECDBA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B79271845D7006ECDBA /* UIView+Extensions.swift */; };
 		84DAE2A227189130005DCC98 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2A12718912F005DCC98 /* Colors.swift */; };
+		84DAE2A92721576E005DCC98 /* ViewForModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAE2A82721576E005DCC98 /* ViewForModel.xib */; };
+		84DAE2AC272157A9005DCC98 /* ViewForModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2AB272157A9005DCC98 /* ViewForModel.swift */; };
+		84DAE2BB2721870F005DCC98 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2BA2721870F005DCC98 /* SwipeableView.swift */; };
+		84DAE2BF272187A6005DCC98 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */; };
+		84DAE2C2272187DA005DCC98 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2C1272187DA005DCC98 /* SwipeDirection.swift */; };
+		84DAE2C527218836005DCC98 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2C427218836005DCC98 /* CGPoint+SwipeableAdditions.swift */; };
+		84DAE2C82721887E005DCC98 /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2C72721887E005DCC98 /* CGRect+SwipeAdditions.swift */; };
+		84DAE2CB272188BB005DCC98 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2CA272188BB005DCC98 /* UIView+Constraints.swift */; };
+		84DAE2CE27218903005DCC98 /* SwipeableCardViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2CD27218903005DCC98 /* SwipeableCardViewContainer.swift */; };
+		84DAE2D12721894A005DCC98 /* SwipeableCardViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2D02721894A005DCC98 /* SwipeableCardViewDataSource.swift */; };
+		84DAE2D427218977005DCC98 /* SwipeableCardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2D327218977005DCC98 /* SwipeableCardViewDelegate.swift */; };
+		84DAE2D92721927E005DCC98 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2D82721927E005DCC98 /* CardView.swift */; };
+		84DAE2DD27219360005DCC98 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAE2DC27219360005DCC98 /* CardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,16 +48,29 @@
 		635387DA2716FD74002A67C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		635387DD2716FD74002A67C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635387DF2716FD74002A67C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71A3ACA8AADF86C0358A7E38 /* Pods-TinderFunnyCopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderFunnyCopy.release.xcconfig"; path = "Target Support Files/Pods-TinderFunnyCopy/Pods-TinderFunnyCopy.release.xcconfig"; sourceTree = "<group>"; };
 		843D4B6427183518006ECDBA /* MainScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
-		843D4B6527183518006ECDBA /* MainScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenDataSource.swift; sourceTree = "<group>"; };
 		843D4B6627183518006ECDBA /* MainScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenBuilder.swift; sourceTree = "<group>"; };
 		843D4B6827183518006ECDBA /* MainScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenView.xib; sourceTree = "<group>"; };
-		843D4B6927183518006ECDBA /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
-		843D4B6A27183518006ECDBA /* MainScreenCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		843D4B6B27183518006ECDBA /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		843D4B6C27183518006ECDBA /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		843D4B79271845D7006ECDBA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		84DAE2A12718912F005DCC98 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		84DAE2A82721576E005DCC98 /* ViewForModel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewForModel.xib; sourceTree = "<group>"; };
+		84DAE2AB272157A9005DCC98 /* ViewForModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForModel.swift; sourceTree = "<group>"; };
+		84DAE2BA2721870F005DCC98 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
+		84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
+		84DAE2C1272187DA005DCC98 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		84DAE2C427218836005DCC98 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
+		84DAE2C72721887E005DCC98 /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
+		84DAE2CA272188BB005DCC98 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		84DAE2CD27218903005DCC98 /* SwipeableCardViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewContainer.swift; sourceTree = "<group>"; };
+		84DAE2D02721894A005DCC98 /* SwipeableCardViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDataSource.swift; sourceTree = "<group>"; };
+		84DAE2D327218977005DCC98 /* SwipeableCardViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDelegate.swift; sourceTree = "<group>"; };
+		84DAE2D82721927E005DCC98 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		84DAE2DC27219360005DCC98 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		87F2E30F1FEA3CD10972A2D5 /* Pods-TinderFunnyCopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderFunnyCopy.debug.xcconfig"; path = "Target Support Files/Pods-TinderFunnyCopy/Pods-TinderFunnyCopy.debug.xcconfig"; sourceTree = "<group>"; };
+		B3B53F5ACCD012FB3CFEB89B /* Pods_TinderFunnyCopy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderFunnyCopy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				635387F427170B1C002A67C7 /* Moya in Frameworks */,
+				523AB3DC98051D57FCE35EB1 /* Pods_TinderFunnyCopy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +108,8 @@
 			children = (
 				635387D02716FD73002A67C7 /* TinderFunnyCopy */,
 				635387CF2716FD73002A67C7 /* Products */,
+				75CD46F3E4660100993F540F /* Pods */,
+				D26C64D68E3C36288A85848E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +124,7 @@
 		635387D02716FD73002A67C7 /* TinderFunnyCopy */ = {
 			isa = PBXGroup;
 			children = (
+				84DAE2A727215737005DCC98 /* Views */,
 				63340D382720625D00312EC0 /* LocationManager */,
 				633C2580271D9BE600193CE0 /* Networking */,
 				843D4B78271845D7006ECDBA /* Extensions */,
@@ -111,11 +139,20 @@
 			path = TinderFunnyCopy;
 			sourceTree = "<group>";
 		};
+		75CD46F3E4660100993F540F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87F2E30F1FEA3CD10972A2D5 /* Pods-TinderFunnyCopy.debug.xcconfig */,
+				71A3ACA8AADF86C0358A7E38 /* Pods-TinderFunnyCopy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		843D4B6327183518006ECDBA /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				84DAE2B52721867B005DCC98 /* Swipeable */,
 				843D4B6427183518006ECDBA /* MainScreenModel.swift */,
-				843D4B6527183518006ECDBA /* MainScreenDataSource.swift */,
 				843D4B6C27183518006ECDBA /* MainScreenViewController.swift */,
 				843D4B6627183518006ECDBA /* MainScreenBuilder.swift */,
 				843D4B6727183518006ECDBA /* View */,
@@ -126,10 +163,10 @@
 		843D4B6727183518006ECDBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				843D4B6927183518006ECDBA /* MainScreenCollectionViewCell.swift */,
-				843D4B6A27183518006ECDBA /* MainScreenCollectionViewCell.xib */,
 				843D4B6B27183518006ECDBA /* MainScreenView.swift */,
 				843D4B6827183518006ECDBA /* MainScreenView.xib */,
+				84DAE2D82721927E005DCC98 /* CardView.swift */,
+				84DAE2DC27219360005DCC98 /* CardView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +179,39 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		84DAE2A727215737005DCC98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84DAE2AB272157A9005DCC98 /* ViewForModel.swift */,
+				84DAE2A82721576E005DCC98 /* ViewForModel.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84DAE2B52721867B005DCC98 /* Swipeable */ = {
+			isa = PBXGroup;
+			children = (
+				84DAE2BA2721870F005DCC98 /* SwipeableView.swift */,
+				84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */,
+				84DAE2C1272187DA005DCC98 /* SwipeDirection.swift */,
+				84DAE2C427218836005DCC98 /* CGPoint+SwipeableAdditions.swift */,
+				84DAE2C72721887E005DCC98 /* CGRect+SwipeAdditions.swift */,
+				84DAE2CA272188BB005DCC98 /* UIView+Constraints.swift */,
+				84DAE2CD27218903005DCC98 /* SwipeableCardViewContainer.swift */,
+				84DAE2D02721894A005DCC98 /* SwipeableCardViewDataSource.swift */,
+				84DAE2D327218977005DCC98 /* SwipeableCardViewDelegate.swift */,
+			);
+			path = Swipeable;
+			sourceTree = "<group>";
+		};
+		D26C64D68E3C36288A85848E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3B53F5ACCD012FB3CFEB89B /* Pods_TinderFunnyCopy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635387E22716FD74002A67C7 /* Build configuration list for PBXNativeTarget "TinderFunnyCopy" */;
 			buildPhases = (
+				5B9204E76F271F22F912D7A1 /* [CP] Check Pods Manifest.lock */,
 				635387CA2716FD73002A67C7 /* Sources */,
 				635387CB2716FD73002A67C7 /* Frameworks */,
 				635387CC2716FD73002A67C7 /* Resources */,
+				BEC20470E9ECA2141EC8451D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,30 +279,82 @@
 			files = (
 				635387DE2716FD74002A67C7 /* LaunchScreen.storyboard in Resources */,
 				635387DB2716FD74002A67C7 /* Assets.xcassets in Resources */,
-				843D4B7227183518006ECDBA /* MainScreenCollectionViewCell.xib in Resources */,
+				84DAE2DD27219360005DCC98 /* CardView.xib in Resources */,
+				84DAE2A92721576E005DCC98 /* ViewForModel.xib in Resources */,
 				843D4B7027183518006ECDBA /* MainScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B9204E76F271F22F912D7A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinderFunnyCopy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEC20470E9ECA2141EC8451D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinderFunnyCopy/Pods-TinderFunnyCopy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinderFunnyCopy/Pods-TinderFunnyCopy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinderFunnyCopy/Pods-TinderFunnyCopy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		635387CA2716FD73002A67C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DAE2AC272157A9005DCC98 /* ViewForModel.swift in Sources */,
 				6339195627199E4D00CE1AFB /* Models.swift in Sources */,
-				843D4B6E27183518006ECDBA /* MainScreenDataSource.swift in Sources */,
 				843D4B7A271845D8006ECDBA /* UIView+Extensions.swift in Sources */,
+				84DAE2C527218836005DCC98 /* CGPoint+SwipeableAdditions.swift in Sources */,
+				84DAE2C2272187DA005DCC98 /* SwipeDirection.swift in Sources */,
 				633C2582271DA01800193CE0 /* PostServices.swift in Sources */,
+				84DAE2CB272188BB005DCC98 /* UIView+Constraints.swift in Sources */,
+				84DAE2D12721894A005DCC98 /* SwipeableCardViewDataSource.swift in Sources */,
 				635387D22716FD73002A67C7 /* AppDelegate.swift in Sources */,
 				84DAE2A227189130005DCC98 /* Colors.swift in Sources */,
+				84DAE2BB2721870F005DCC98 /* SwipeableView.swift in Sources */,
+				84DAE2BF272187A6005DCC98 /* SwipeableViewDelegate.swift in Sources */,
 				843D4B6D27183518006ECDBA /* MainScreenModel.swift in Sources */,
-				843D4B7127183518006ECDBA /* MainScreenCollectionViewCell.swift in Sources */,
+				84DAE2D427218977005DCC98 /* SwipeableCardViewDelegate.swift in Sources */,
 				843D4B6F27183518006ECDBA /* MainScreenBuilder.swift in Sources */,
+				84DAE2C82721887E005DCC98 /* CGRect+SwipeAdditions.swift in Sources */,
 				635387D42716FD73002A67C7 /* SceneDelegate.swift in Sources */,
+				84DAE2D92721927E005DCC98 /* CardView.swift in Sources */,
 				843D4B7327183518006ECDBA /* MainScreenView.swift in Sources */,
 				843D4B7427183518006ECDBA /* MainScreenViewController.swift in Sources */,
+				84DAE2CE27218903005DCC98 /* SwipeableCardViewContainer.swift in Sources */,
 				63340D3E2720649F00312EC0 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +491,7 @@
 		};
 		635387E32716FD74002A67C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F2E30F1FEA3CD10972A2D5 /* Pods-TinderFunnyCopy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +511,7 @@
 		};
 		635387E42716FD74002A67C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71A3ACA8AADF86C0358A7E38 /* Pods-TinderFunnyCopy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

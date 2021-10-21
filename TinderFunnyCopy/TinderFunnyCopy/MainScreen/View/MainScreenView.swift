@@ -6,24 +6,31 @@
 
 import UIKit
 
+struct Defaults {
+    struct View {
+        static let shadowRadius: CGFloat = 2.0
+        static let shadowOpacity: Float = 0.5
+        static let shadowOffset: CGSize = CGSize(width: 0, height: 5)
+    }
+}
 
 // MARK: - MainScreenViewDelegate
-protocol MainScreenViewDelegate: class {
+protocol MainScreenViewDelegate: AnyObject {
   func viewSomeAction(view: MainScreenViewProtocol)
 }
 
 // MARK: - MainScreenViewProtocol
 protocol MainScreenViewProtocol: UIView {
   var delegate: MainScreenViewDelegate? { get set }
-  var collectionView: UICollectionView! { get }
+  var contentView: SwipeableCardViewContainer! { get }
 }
 
 // MARK: - MainScreenView
-class MainScreenView: UIView, MainScreenViewProtocol{
+final class MainScreenView: UIView, MainScreenViewProtocol{
   
   // MARK: - MainScreenView interface methods
   weak var delegate: MainScreenViewDelegate?
-  @IBOutlet weak var collectionView: UICollectionView!
+  
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var leftViewInStackView: UIView!
   @IBOutlet weak var rightViewInStackView: UIView!
@@ -31,6 +38,7 @@ class MainScreenView: UIView, MainScreenViewProtocol{
   @IBOutlet weak var rightCircleView: UIView!
   @IBOutlet weak var leftCircleImage: UIImageView!
   @IBOutlet weak var rightCircleImage: UIImageView!
+  @IBOutlet internal weak var contentView: SwipeableCardViewContainer!
   
   // add view private properties/outlets/methods here
   
@@ -43,39 +51,32 @@ class MainScreenView: UIView, MainScreenViewProtocol{
   override func awakeFromNib() {
     super.awakeFromNib()
     setupUI()
-    setValuesMainScreenView()
-    
-//    collectionView.collectionViewLayout = 
-    
   }
 }
 
 private extension MainScreenView {
   func setupUI() {
-    leftCircleView.layer.cornerRadius = leftCircleView.frame.size.width/2
-    leftCircleView.clipsToBounds = true
-    leftCircleView.layer.shadowColor = UIColor.black.cgColor
-    leftCircleView.layer.shadowOffset = CGSize(width: 0, height: 5)
-    leftCircleView.layer.masksToBounds = false
-    leftCircleView.layer.shadowRadius = 2.0
-    leftCircleView.layer.shadowOpacity = 0.5
-    
-    rightCircleView.layer.cornerRadius = rightCircleView.frame.size.width/2
-    rightCircleView.clipsToBounds = true
-    rightCircleView.layer.shadowColor = UIColor.black.cgColor
-    rightCircleView.layer.shadowOffset = CGSize(width: 0, height: 5)
-    rightCircleView.layer.masksToBounds = false
-    rightCircleView.layer.shadowRadius = 2.0
-    rightCircleView.layer.shadowOpacity = 0.5
+    leftCircleView.applyStyle()
+    rightCircleView.applyStyle()
     
     rightCircleView.backgroundColor = myRedColor
     rightCircleImage.image = UIImage(named: "Heart")?.withTintColor(.white)
     leftCircleImage.image = UIImage(named: "Cross")
-  }
-  
-  func setValuesMainScreenView() {
+
     titleLabel.text = "Discover"
     titleLabel.font = UIFont.systemFont(ofSize: 38, weight: .heavy)
   }
+}
+
+private extension UIView {
+    func applyStyle() {
+        layer.cornerRadius = frame.size.width / 2
+        clipsToBounds = true
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = Defaults.View.shadowOffset
+        layer.masksToBounds = false
+        layer.shadowRadius = Defaults.View.shadowRadius
+        layer.shadowOpacity = Defaults.View.shadowOpacity
+    }
 }
 

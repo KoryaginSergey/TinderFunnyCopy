@@ -14,16 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2wu-us-T0v">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P77-AY-Rl0" customClass="SwipeableCardViewContainer" customModule="TinderFunnyCopy" customModuleProvider="target">
                     <rect key="frame" x="20" y="130" width="280" height="308"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BYb-vK-5Ae">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zm-hF-wZC">
                     <rect key="frame" x="0.0" y="40" width="320" height="50"/>
                     <constraints>
@@ -111,16 +105,16 @@
                 <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="QxI-h9-tGt" secondAttribute="trailing" id="81j-HB-X5E"/>
                 <constraint firstItem="6zm-hF-wZC" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" id="89z-9h-FHW"/>
                 <constraint firstItem="Mzc-ku-3zY" firstAttribute="bottom" secondItem="QxI-h9-tGt" secondAttribute="bottom" id="BAV-cb-WVC"/>
+                <constraint firstItem="P77-AY-Rl0" firstAttribute="top" secondItem="6zm-hF-wZC" secondAttribute="bottom" constant="40" id="GBZ-M2-ZYa"/>
                 <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="6zm-hF-wZC" secondAttribute="trailing" id="VEx-Jx-CaS"/>
-                <constraint firstItem="QxI-h9-tGt" firstAttribute="top" secondItem="2wu-us-T0v" secondAttribute="bottom" id="WMU-Su-HGJ"/>
-                <constraint firstItem="2wu-us-T0v" firstAttribute="top" secondItem="6zm-hF-wZC" secondAttribute="bottom" constant="40" id="ZcT-ib-omT"/>
                 <constraint firstItem="6zm-hF-wZC" firstAttribute="top" secondItem="Mzc-ku-3zY" secondAttribute="top" constant="40" id="epJ-GR-9fc"/>
-                <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="2wu-us-T0v" secondAttribute="trailing" constant="20" id="i9t-6P-agu"/>
-                <constraint firstItem="2wu-us-T0v" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" constant="20" id="uow-AA-NUM"/>
+                <constraint firstItem="Mzc-ku-3zY" firstAttribute="trailing" secondItem="P77-AY-Rl0" secondAttribute="trailing" constant="20" id="rpy-hk-DJt"/>
                 <constraint firstItem="QxI-h9-tGt" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" id="v17-Wz-pCa"/>
+                <constraint firstItem="P77-AY-Rl0" firstAttribute="leading" secondItem="Mzc-ku-3zY" secondAttribute="leading" constant="20" id="vRl-la-TAt"/>
+                <constraint firstItem="QxI-h9-tGt" firstAttribute="top" secondItem="P77-AY-Rl0" secondAttribute="bottom" id="z89-r0-ajk"/>
             </constraints>
             <connections>
-                <outlet property="collectionView" destination="2wu-us-T0v" id="NrR-yU-eFl"/>
+                <outlet property="contentView" destination="P77-AY-Rl0" id="Tz9-rb-yTW"/>
                 <outlet property="leftCircleImage" destination="sMQ-Vj-Pkg" id="osP-Ol-12i"/>
                 <outlet property="leftCircleView" destination="2KN-2t-emh" id="Fcc-bA-LG0"/>
                 <outlet property="leftViewInStackView" destination="GIn-m6-1zm" id="qui-OC-MKA"/>

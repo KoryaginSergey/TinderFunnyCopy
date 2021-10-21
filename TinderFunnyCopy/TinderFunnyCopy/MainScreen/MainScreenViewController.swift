@@ -9,10 +9,9 @@ import Alamofire
 
 
 // MARK: - MainScreenViewController
-class MainScreenViewController: UIViewController, UICollectionViewDelegate {
+class MainScreenViewController: UIViewController {
   
   var model: MainScreenModelProtocol
-  private var dataSource: MainScreenDataSource
   
   fileprivate var tempView: MainScreenViewProtocol?
   var customView: MainScreenViewProtocol! {
@@ -20,18 +19,16 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate {
   }
   
   // MARK: - Initializers
-  init(withView view: MainScreenViewProtocol, model: MainScreenModelProtocol, dataSource: MainScreenDataSource) {
-    
+  init(withView view: MainScreenViewProtocol, model: MainScreenModelProtocol) {
     self.model = model
-    self.dataSource = dataSource
     self.tempView = view
     
     super.init(nibName: nil, bundle: nil)
     
     self.model.delegate = self
-    self.dataSource.cellDelegate = self
-    
+    customView.contentView.dataSource = self
     // your custom code
+    title = "Discover"
   }
   
   required convenience init?(coder aDecoder: NSCoder) {
@@ -50,17 +47,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate {
     super.viewDidLoad()
     
     self.customView.delegate = self
-    self.connectCollectionViewDependencies()
-    
-    
     PostServices.shared.fetchRequest()
-    
-  }
-  
-  private func connectCollectionViewDependencies() {
-    self.customView.collectionView.delegate = self
-    self.dataSource.registerNibsForCollectionView(collectionView: self.customView.collectionView)
-    self.customView.collectionView.dataSource = self.dataSource
   }
   
   // MARK: - Collection view delegate
@@ -79,8 +66,19 @@ extension MainScreenViewController: MainScreenModelDelegate {
   }
 }
 
-// MARK: - MainScreenCellDelegate
-extension MainScreenViewController: MainScreenCellDelegate {
-  func cellDidTapSomeButton(cell: MainScreenCollectionViewCell) {
-  }
+extension MainScreenViewController: SwipeableCardViewDataSource {
+    
+    func numberOfCards() -> Int {
+        5
+    }
+    
+    func card(forItemAtIndex index: Int) -> SwipeableView {
+        let card: CardView = CardView.create()
+        return card
+    }
+    
+    func viewForEmptyCards() -> UIView? {
+        nil
+    }
+    
 }

@@ -6,27 +6,18 @@
 
 import UIKit
 
-
 // MARK: - MainScreenModelDelegate
-protocol MainScreenModelDelegate: class {
+protocol MainScreenModelDelegate: AnyObject {
   func modelDidChanged(model: MainScreenModelProtocol)
 }
 
 // MARK: - MainScreenModelProtocol
-protocol MainScreenModelProtocol: class {
+protocol MainScreenModelProtocol: AnyObject {
   var delegate: MainScreenModelDelegate? { get set }
-  var items: [String] { get }
 }
 
 // MARK: - MainScreenModel
 class MainScreenModel: MainScreenModelProtocol {
-  init() {
-    self.items = self.getTestItems()
-  }
-  
-  func getTestItems() -> [String] {
-    return ["Item 0", "Item 1", "Item 2"]
-  }
   
   // MARK: - MainScreenModel methods
   weak var delegate: MainScreenModelDelegate?
