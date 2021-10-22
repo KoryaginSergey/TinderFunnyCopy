@@ -10,12 +10,38 @@ import UIKit
 
 class CardView: SwipeableView {
   
+  @IBOutlet weak var fotoImageView: UIImageView!
+  @IBOutlet weak var fullNameLabel: UILabel!
+  @IBOutlet weak var locationLabel: UILabel!
+  @IBOutlet weak var distanceLabel: UILabel!
+  
+  @IBOutlet weak var centralView: UIView!
+  
+  @IBOutlet weak var centralImageView: UIImageView!
   
   
-  
-  
-  
-  
+  public struct State {
+ 
+    let firstName: String?
+    let lastName: String?
+//    let age: Int?
+//    let city: String?
+//    let country: String?
+//    let coordinatesLatitude: String?
+//    let coordinatesLangitude: String?
+    
+    
+    init(firstName: String?, lastName: String?) {
+      self.firstName = firstName
+      self.lastName = lastName
+    }
+  }
+    
+    public var state: State? {
+      didSet {
+        configure()
+      }
+    }
   
   
   /// Shadow View
@@ -26,8 +52,7 @@ class CardView: SwipeableView {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    backgroundColor = myBlueColor
-    layer.cornerRadius = 14
+    setupUI()
   }
   
   override func layoutSubviews() {
@@ -71,5 +96,36 @@ class CardView: SwipeableView {
       shadowView.layer.shadowPath = shadowPath.cgPath
     }
   }
+}
+
+private extension CardView {
+  
+  func setupUI() {
+    backgroundColor = myGreyColor
+    layer.cornerRadius = 14
+    centralView.applyStyle()
+  
+    
+//    centralView.backgroundColor = myRedColor
+//    centralImageView.image = UIImage(named: "Heart")?.withTintColor(.white)
+    
+    centralImageView.image = UIImage(named: "Cross")
+  }
+  
+  func configure() {
+//    titleLabel.text = state?.title
+//    sourceLabel.text = state?.source
+//    dateLabel.text = state?.date
+  }
+  
+  
   
 }
+
+private extension UIView {
+    func applyStyle() {
+        layer.cornerRadius = frame.size.width / 2
+        clipsToBounds = true
+    }
+}
+

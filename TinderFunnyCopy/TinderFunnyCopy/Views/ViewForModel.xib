@@ -8,7 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewForModel" customModule="TinderFunnyCopy" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewForModel" customModule="TinderFunnyCopy" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomStackView" destination="MDL-rA-pNK" id="Bxt-O2-SF3"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="271" height="376"/>
@@ -62,7 +66,6 @@
                         <constraint firstItem="2BM-Xh-dfq" firstAttribute="height" secondItem="MDL-rA-pNK" secondAttribute="height" id="WOl-vS-pvh"/>
                         <constraint firstAttribute="height" constant="40" id="b0o-OG-ddr"/>
                         <constraint firstItem="2BM-Xh-dfq" firstAttribute="centerX" secondItem="8M2-u5-Dkj" secondAttribute="centerX" id="o6V-oh-6ye"/>
-                        <constraint firstItem="MDL-rA-pNK" firstAttribute="centerX" secondItem="8M2-u5-Dkj" secondAttribute="centerX" id="yaw-ju-Rvr"/>
                     </constraints>
                 </stackView>
             </subviews>
@@ -78,7 +81,7 @@
                 <constraint firstItem="ajU-5F-QcX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rFq-zy-5Yv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-250.00000000000003" y="-104.46428571428571"/>
+            <point key="canvasLocation" x="-44.20289855072464" y="-68.303571428571431"/>
         </view>
     </objects>
     <resources>

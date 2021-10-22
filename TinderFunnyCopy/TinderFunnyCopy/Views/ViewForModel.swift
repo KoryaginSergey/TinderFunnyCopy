@@ -9,10 +9,5 @@ import UIKit
 
 class ViewForModel: UIView {
 
-  
-  
-  
-  
-  
 
 }

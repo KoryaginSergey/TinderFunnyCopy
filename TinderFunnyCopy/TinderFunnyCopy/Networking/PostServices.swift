@@ -37,11 +37,11 @@ struct PostServices {
   
   let params: [String: Any] = [
       "page": 1,
-      "results": 8
+      "results": 4
   ]
   
 //  func fetchRequest() {
-//
+
 //    AF.request("https://randomuser.me/api/", method: .get, parameters: params).validate().responseJSON { responseJSON in
 ////      print(responseJSON)
 //
@@ -57,13 +57,13 @@ struct PostServices {
 //    }
 //  }
   
-  func fetchRequest(completion: @escaping ([Model]?) -> Void) {
+  func fetchRequest(completion: @escaping ([Result]?) -> Void) {
     AF.request("https://randomuser.me/api/", method: .get, parameters: params).validate().responseData { (response) in
       switch response.result {
             case .success(let data):
-              let object = try? JSONDecoder().decode(ModelRequest.self, from: data)
-              print("")
-              completion(object?.models)
+              let object = try? JSONDecoder().decode(Welcome.self, from: data)
+              print(data)
+              completion(object?.results)
             case .failure(let error):
               print(error)
             }
