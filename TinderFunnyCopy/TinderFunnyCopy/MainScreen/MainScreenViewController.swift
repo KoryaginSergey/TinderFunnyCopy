@@ -67,8 +67,10 @@ class MainScreenViewController: UIViewController {
 // MARK: - MainScreenViewDelegate
 extension MainScreenViewController: MainScreenViewDelegate {
   func viewLeftAction(view: MainScreenViewProtocol) {
+    print("left")
   }
   func viewRightAction(view: MainScreenViewProtocol) {
+    print("right")
   }
 }
 

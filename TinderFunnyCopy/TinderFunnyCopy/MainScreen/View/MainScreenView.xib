@@ -39,7 +39,7 @@
                             </constraints>
                             <color key="tintColor" red="0.19607843137254902" green="0.71372549019607845" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="leftButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="vR3-CR-suJ"/>
+                                <action selector="leftButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="rqK-Cs-U0L"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ4-VY-SWy">
@@ -54,7 +54,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="rightButtonAction:" destination="o7U-F1-KOe" eventType="touchUpInside" id="Ac8-JV-Rsy"/>
+                                <action selector="rightButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="VGa-wj-CR4"/>
                             </connections>
                         </button>
                     </subviews>
