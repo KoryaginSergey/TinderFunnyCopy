@@ -16,7 +16,8 @@ struct Defaults {
 
 // MARK: - MainScreenViewDelegate
 protocol MainScreenViewDelegate: AnyObject {
-  func viewSomeAction(view: MainScreenViewProtocol)
+  func viewLeftAction(view: MainScreenViewProtocol)
+  func viewRightAction(view: MainScreenViewProtocol)
 }
 
 // MARK: - MainScreenViewProtocol
@@ -32,20 +33,31 @@ final class MainScreenView: UIView, MainScreenViewProtocol{
   weak var delegate: MainScreenViewDelegate?
   
   @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var leftViewInStackView: UIView!
-  @IBOutlet weak var rightViewInStackView: UIView!
-  @IBOutlet weak var leftCircleView: UIView!
-  @IBOutlet weak var rightCircleView: UIView!
-  @IBOutlet weak var leftCircleImage: UIImageView!
-  @IBOutlet weak var rightCircleImage: UIImageView!
+  @IBOutlet weak var leftButton: UIButton!
+  @IBOutlet weak var rightButton: UIButton!
+  
+//  @IBOutlet weak var leftViewInStackView: UIView!
+//  @IBOutlet weak var rightViewInStackView: UIView!
+//  @IBOutlet weak var leftCircleView: UIView!
+//  @IBOutlet weak var rightCircleView: UIView!
+//  @IBOutlet weak var leftCircleImage: UIImageView!
+//  @IBOutlet weak var rightCircleImage: UIImageView!
   @IBOutlet internal weak var contentView: SwipeableCardViewContainer!
   
   // add view private properties/outlets/methods here
   
   // MARK: - IBActions
-  @IBAction func someButtonAction() {
-    self.delegate?.viewSomeAction(view: self)
+  @IBAction func leftButtonAction() {
+    self.delegate?.viewLeftAction(view: self)
   }
+  @IBAction func rightButtonAction() {
+    self.delegate?.viewRightAction(view: self)
+  }
+  
+  
+  
+  
+  
   
   // MARK: - Overrided methods
   override func awakeFromNib() {
@@ -56,19 +68,24 @@ final class MainScreenView: UIView, MainScreenViewProtocol{
 
 private extension MainScreenView {
   func setupUI() {
-    leftCircleView.applyStyle()
-    rightCircleView.applyStyle()
+//    leftCircleView.applyStyle()
+//    rightCircleView.applyStyle()
+//    rightCircleView.backgroundColor = myRedColor
+//    rightCircleImage.image = UIImage(named: "Heart")?.withTintColor(.white)
+//    leftCircleImage.image = UIImage(named: "Cross")
     
-    rightCircleView.backgroundColor = myRedColor
-    rightCircleImage.image = UIImage(named: "Heart")?.withTintColor(.white)
-    leftCircleImage.image = UIImage(named: "Cross")
+    leftButton.applyStyle()
+    leftButton.setImage(UIImage(named: "Cross"), for: .normal)
+    rightButton.applyStyle()
+    rightButton.backgroundColor = myRedColor
+    rightButton.setImage(UIImage(named: "Heart")?.withTintColor(.white), for: .normal)
 
     titleLabel.text = "Discover"
     titleLabel.font = UIFont.systemFont(ofSize: 38, weight: .heavy)
   }
 }
 
-private extension UIView {
+private extension UIButton {
     func applyStyle() {
         layer.cornerRadius = frame.size.width / 2
         clipsToBounds = true

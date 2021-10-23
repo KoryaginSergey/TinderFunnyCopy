@@ -37,7 +37,7 @@ struct PostServices {
   
   let params: [String: Any] = [
       "page": 1,
-      "results": 4
+      "results": 7
   ]
   
 //  func fetchRequest() {

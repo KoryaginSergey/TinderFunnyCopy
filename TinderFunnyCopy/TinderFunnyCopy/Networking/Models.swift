@@ -55,7 +55,7 @@ struct ID: Codable {
 struct Location: Codable {
   let street: Street?
   let city, state, country: String?
-  let postcode: Int?
+//  let postcode: Int?
   let coordinates: Coordinates?
   let timezone: Timezone?
 }
