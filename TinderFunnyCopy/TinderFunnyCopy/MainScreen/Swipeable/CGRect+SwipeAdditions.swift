@@ -7,10 +7,10 @@
 
 import CoreGraphics
 
+
 typealias CGLine = (start: CGPoint, end: CGPoint)
 
 extension CGRect {
-  
   var topLine: CGLine {
     return (SwipeDirection.topLeft.point, SwipeDirection.topRight.point)
   }
@@ -23,9 +23,7 @@ extension CGRect {
   var rightLine: CGLine {
     return (SwipeDirection.topRight.point, SwipeDirection.bottomRight.point)
   }
-  
   var perimeterLines: [CGLine] {
     return [topLine, leftLine, bottomLine, rightLine]
   }
-  
 }

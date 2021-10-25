@@ -7,18 +7,42 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 
-
-//let locationManager = CLLocationManager()
-//locationManager.delegate = self
-//locationManager.requestLocation()
-
-
-//https://www.hackingwithswift.com/read/22/2/requesting-location-core-location
-//https://www.advancedswift.com/user-location-in-swift/
+class LocationManager: NSObject {
+  lazy var locationManager: CLLocationManager = {
+    let localManager = CLLocationManager()
+    localManager.delegate = self
+    localManager.desiredAccuracy = 100
+    localManager.pausesLocationUpdatesAutomatically = false
+    localManager.requestWhenInUseAuthorization()
+    return localManager
+  }()
   
+  func currentLocationRequest(completion: @escaping (CLLocation?) -> ()) {
+    closure = { location in
+      completion(location)
+    }
+    locationManager.startUpdatingLocation()
+  }
   
+  var closure:((CLLocation?) -> ())?
+}
+
+// MARK: - CLLocationManagerDelegate
+extension LocationManager: CLLocationManagerDelegate {
   
-  
+  //MARK: - request of coordinate when changing location
+  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    if let lastLocation = locations.last {
+      closure?(lastLocation)
+      locationManager.stopUpdatingLocation()
+    }
+  }
+}
+
+
+
+
 

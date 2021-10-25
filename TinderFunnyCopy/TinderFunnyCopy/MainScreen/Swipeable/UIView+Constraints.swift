@@ -7,8 +7,8 @@
 
 import UIKit
 
+
 extension UIView {
-  
   /// Adds a view as a subview and constrains it to the edges
   /// of its new containing view.
   ///
@@ -60,5 +60,4 @@ extension UIView {
                          constant: 0)
     ])
   }
-  
 }

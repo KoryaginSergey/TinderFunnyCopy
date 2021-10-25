@@ -8,6 +8,7 @@
 import Foundation
 import CoreGraphics
 
+
 enum SwipeDirection {
   case left
   case right
@@ -85,5 +86,4 @@ enum SwipeDirection {
     let h = VerticalPosition.bottom.rawValue - VerticalPosition.top.rawValue
     return CGRect(x: HorizontalPosition.left.rawValue, y: VerticalPosition.top.rawValue, width: w, height: h)
   }
-  
 }

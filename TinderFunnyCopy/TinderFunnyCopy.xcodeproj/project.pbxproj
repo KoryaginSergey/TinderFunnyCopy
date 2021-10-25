@@ -11,6 +11,8 @@
 		63340D3E2720649F00312EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63340D3D2720649F00312EC0 /* LocationManager.swift */; };
 		6339195627199E4D00CE1AFB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339195527199E4D00CE1AFB /* Models.swift */; };
 		633C2582271DA01800193CE0 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C2581271DA01800193CE0 /* PostServices.swift */; };
+		634DD93F2726BA4C00F8CD92 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 634DD93E2726BA4C00F8CD92 /* SDWebImage */; };
+		634DD9422726BE4700F8CD92 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634DD9412726BE4700F8CD92 /* Result+Extensions.swift */; };
 		635387D22716FD73002A67C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635387D12716FD73002A67C7 /* AppDelegate.swift */; };
 		635387D42716FD73002A67C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635387D32716FD73002A67C7 /* SceneDelegate.swift */; };
 		635387DB2716FD74002A67C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635387DA2716FD74002A67C7 /* Assets.xcassets */; };
@@ -42,6 +44,7 @@
 		63340D3D2720649F00312EC0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6339195527199E4D00CE1AFB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		633C2581271DA01800193CE0 /* PostServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
+		634DD9412726BE4700F8CD92 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		635387CE2716FD73002A67C7 /* TinderFunnyCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderFunnyCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635387D12716FD73002A67C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635387D32716FD73002A67C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634DD93F2726BA4C00F8CD92 /* SDWebImage in Frameworks */,
 				635387F427170B1C002A67C7 /* Moya in Frameworks */,
 				523AB3DC98051D57FCE35EB1 /* Pods_TinderFunnyCopy.framework in Frameworks */,
 			);
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				843D4B79271845D7006ECDBA /* UIView+Extensions.swift */,
+				634DD9412726BE4700F8CD92 /* Result+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			name = TinderFunnyCopy;
 			packageProductDependencies = (
 				635387F327170B1C002A67C7 /* Moya */,
+				634DD93E2726BA4C00F8CD92 /* SDWebImage */,
 			);
 			productName = TinderFunnyCopy;
 			productReference = 635387CE2716FD73002A67C7 /* TinderFunnyCopy.app */;
@@ -262,6 +268,7 @@
 			mainGroup = 635387C52716FD73002A67C7;
 			packageReferences = (
 				635387F227170B1C002A67C7 /* XCRemoteSwiftPackageReference "Moya" */,
+				634DD93D2726BA4C00F8CD92 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 635387CF2716FD73002A67C7 /* Products */;
 			projectDirPath = "";
@@ -336,6 +343,7 @@
 			files = (
 				84DAE2AC272157A9005DCC98 /* ViewForModel.swift in Sources */,
 				6339195627199E4D00CE1AFB /* Models.swift in Sources */,
+				634DD9422726BE4700F8CD92 /* Result+Extensions.swift in Sources */,
 				843D4B7A271845D8006ECDBA /* UIView+Extensions.swift in Sources */,
 				84DAE2C527218836005DCC98 /* CGPoint+SwipeableAdditions.swift in Sources */,
 				84DAE2C2272187DA005DCC98 /* SwipeDirection.swift in Sources */,
@@ -553,6 +561,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		634DD93D2726BA4C00F8CD92 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.1;
+			};
+		};
 		635387F227170B1C002A67C7 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -564,6 +580,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		634DD93E2726BA4C00F8CD92 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 634DD93D2726BA4C00F8CD92 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		635387F327170B1C002A67C7 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 635387F227170B1C002A67C7 /* XCRemoteSwiftPackageReference "Moya" */;

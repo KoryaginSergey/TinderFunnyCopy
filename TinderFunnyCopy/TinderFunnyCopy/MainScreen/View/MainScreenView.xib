@@ -31,7 +31,7 @@
                     <rect key="frame" x="0.0" y="388" width="320" height="180"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYR-HK-7nO">
-                            <rect key="frame" x="90" y="40" width="60" height="60"/>
+                            <rect key="frame" x="70" y="40" width="60" height="60"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="LBL-1K-3HF"/>
@@ -39,11 +39,11 @@
                             </constraints>
                             <color key="tintColor" red="0.19607843137254902" green="0.71372549019607845" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="leftButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="rqK-Cs-U0L"/>
+                                <action selector="dissLikeButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="HWQ-zR-kDW"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ4-VY-SWy">
-                            <rect key="frame" x="170" y="40" width="60" height="60"/>
+                            <rect key="frame" x="190" y="40" width="60" height="60"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="3mI-em-lZl"/>
@@ -54,17 +54,17 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="rightButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="VGa-wj-CR4"/>
+                                <action selector="likeButtonAction" destination="o7U-F1-KOe" eventType="touchUpInside" id="mlB-bv-FDq"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="IQ4-VY-SWy" firstAttribute="centerX" secondItem="2k4-gy-fYh" secondAttribute="centerX" constant="40" id="9PW-MS-yuZ"/>
+                        <constraint firstItem="IQ4-VY-SWy" firstAttribute="centerX" secondItem="2k4-gy-fYh" secondAttribute="centerX" constant="60" id="9PW-MS-yuZ"/>
                         <constraint firstItem="IQ4-VY-SWy" firstAttribute="centerY" secondItem="2k4-gy-fYh" secondAttribute="centerY" constant="-20" id="IK7-pi-Xih"/>
                         <constraint firstAttribute="height" constant="180" id="UGb-Wi-qs4"/>
                         <constraint firstItem="hYR-HK-7nO" firstAttribute="centerY" secondItem="2k4-gy-fYh" secondAttribute="centerY" constant="-20" id="ZJw-Z2-015"/>
-                        <constraint firstItem="hYR-HK-7nO" firstAttribute="centerX" secondItem="2k4-gy-fYh" secondAttribute="centerX" constant="-40" id="dvS-0H-LNH"/>
+                        <constraint firstItem="hYR-HK-7nO" firstAttribute="centerX" secondItem="2k4-gy-fYh" secondAttribute="centerX" constant="-60" id="dvS-0H-LNH"/>
                     </constraints>
                 </view>
             </subviews>
@@ -84,11 +84,11 @@
             </constraints>
             <connections>
                 <outlet property="contentView" destination="P77-AY-Rl0" id="Tz9-rb-yTW"/>
-                <outlet property="leftButton" destination="hYR-HK-7nO" id="DSf-Le-58Y"/>
-                <outlet property="rightButton" destination="IQ4-VY-SWy" id="mzG-60-Kgp"/>
+                <outlet property="dissLikeButton" destination="hYR-HK-7nO" id="v4E-H4-jnp"/>
+                <outlet property="likeButton" destination="IQ4-VY-SWy" id="5kk-PT-oAX"/>
                 <outlet property="titleLabel" destination="6zm-hF-wZC" id="O17-a4-Kzt"/>
             </connections>
-            <point key="canvasLocation" x="-1035" y="-22"/>
+            <point key="canvasLocation" x="-900" y="-7"/>
         </view>
     </objects>
     <resources>

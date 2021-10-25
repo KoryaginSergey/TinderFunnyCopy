@@ -10,4 +10,5 @@ import Foundation
 
 protocol SwipeableCardViewDelegate: AnyObject {
   func didSelect(card: SwipeableView, atIndex index: Int)
+  func didRemoveFirst()
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 /// A DataSource for providing all of the information required
 /// for SwipeableCardViewContainer to layout a series of cards.
 protocol SwipeableCardViewDataSource: AnyObject {
@@ -32,5 +33,4 @@ protocol SwipeableCardViewDataSource: AnyObject {
   ///
   /// - Returns: view to be displayed underneath all cards
   func viewForEmptyCards() -> UIView?
-  
 }

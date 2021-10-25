@@ -6,6 +6,7 @@
 
 import UIKit
 
+
 // MARK: - MainScreenModelDelegate
 protocol MainScreenModelDelegate: AnyObject {
   func modelDidChanged(model: MainScreenModelProtocol)
@@ -27,6 +28,5 @@ class MainScreenModel: MainScreenModelProtocol {
 
   // MARK: - Private methods
   /** Implement private methods here */
-  
 }
 
