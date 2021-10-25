@@ -23,10 +23,5 @@ class MainScreenModel: MainScreenModelProtocol {
   // MARK: - MainScreenModel methods
   weak var delegate: MainScreenModelDelegate?
   private(set) var items: [String] = []
-  
-  /** Implement MainScreenModel methods here */
-
-  // MARK: - Private methods
-  /** Implement private methods here */
 }
 

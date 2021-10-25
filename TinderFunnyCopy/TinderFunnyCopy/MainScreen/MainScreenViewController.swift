@@ -87,7 +87,7 @@ extension MainScreenViewController: SwipeableCardViewDataSource {
     let card: CardView = CardView.create()
     card.state = .init(fullName: person.fullNameAndAge(),
                        distance: person.locationObject()?.distanceKm(to: self.location),
-                       location: person.locationName(), isOnline: false,
+                       location: person.locationName(), isOnline: true,
                        imagePath: person.picture?.large)
     return card
   }

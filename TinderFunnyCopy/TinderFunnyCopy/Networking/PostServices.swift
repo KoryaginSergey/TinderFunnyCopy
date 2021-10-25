@@ -21,7 +21,6 @@ struct Page: Encodable {
 }
 
 struct PostServices {
-  
   static let shared = PostServices()
   
   func fetchRequest(page: Page, completion: @escaping (Welcome) -> Void) {

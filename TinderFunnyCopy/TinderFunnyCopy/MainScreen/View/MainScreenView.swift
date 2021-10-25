@@ -7,14 +7,6 @@
 import UIKit
 
 
-struct Defaults {
-  struct View {
-    static let shadowRadius: CGFloat = 2.0
-    static let shadowOpacity: Float = 0.5
-    static let shadowOffset: CGSize = CGSize(width: 0, height: 5)
-  }
-}
-
 // MARK: - MainScreenViewDelegate
 protocol MainScreenViewDelegate: AnyObject {
   func viewLikeAction(view: MainScreenViewProtocol)
@@ -29,6 +21,14 @@ protocol MainScreenViewProtocol: UIView {
 
 // MARK: - MainScreenView
 final class MainScreenView: UIView, MainScreenViewProtocol{
+  
+  struct Defaults {
+    struct View {
+      static let shadowRadius: CGFloat = 2.0
+      static let shadowOpacity: Float = 0.5
+      static let shadowOffset: CGSize = CGSize(width: 0, height: 5)
+    }
+  }
   
   // MARK: - MainScreenView interface methods
   weak var delegate: MainScreenViewDelegate?
@@ -56,12 +56,11 @@ final class MainScreenView: UIView, MainScreenViewProtocol{
 private extension MainScreenView {
   func setupUI() {
     dissLikeButton.applyStyle()
-    dissLikeButton.setImage(UIImage(named: "Cross"), for: .normal)
+    dissLikeButton.setImage(UIImage(named: "CrossBig"), for: .normal)
     likeButton.applyStyle()
     likeButton.backgroundColor = myRedColor
-    likeButton.setImage(UIImage(named: "Heart")?.withTintColor(.white), for: .normal)
+    likeButton.setImage(UIImage(named: "HeartBig")?.withTintColor(.white), for: .normal)
     titleLabel.text = "Discover"
-    titleLabel.font = UIFont.systemFont(ofSize: 38, weight: .heavy)
   }
 }
 
@@ -70,10 +69,10 @@ private extension UIButton {
     layer.cornerRadius = frame.size.width / 2
     clipsToBounds = true
     layer.shadowColor = UIColor.black.cgColor
-    layer.shadowOffset = Defaults.View.shadowOffset
+    layer.shadowOffset = MainScreenView.Defaults.View.shadowOffset
     layer.masksToBounds = false
-    layer.shadowRadius = Defaults.View.shadowRadius
-    layer.shadowOpacity = Defaults.View.shadowOpacity
+    layer.shadowRadius = MainScreenView.Defaults.View.shadowRadius
+    layer.shadowOpacity = MainScreenView.Defaults.View.shadowOpacity
   }
 }
 

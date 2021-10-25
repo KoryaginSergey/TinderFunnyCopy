@@ -15,21 +15,18 @@ extension Result {
     if let first = name?.first {
       fullNameString += first
     }
-    
     if let last = name?.last {
       if !fullNameString.isEmpty {
         fullNameString += " "
       }
       fullNameString += last
     }
-    
     if let age = dob?.age {
       if !fullNameString.isEmpty {
         fullNameString += ", "
       }
       fullNameString += "\(age)"
     }
-    
     return fullNameString
   }
   
@@ -44,14 +41,12 @@ extension Result {
     if let city = location?.city {
       locName += city
     }
-    
     if let country = location?.country {
       if !locName.isEmpty {
         locName += ", "
       }
       locName += country
     }
-    
     return locName
   }
 }

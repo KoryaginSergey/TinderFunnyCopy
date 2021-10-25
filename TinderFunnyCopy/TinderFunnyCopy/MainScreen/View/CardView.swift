@@ -10,8 +10,8 @@ import UIKit
 import SDWebImage
 
 
-class CardView: SwipeableView {
-  @IBOutlet weak var fotoImageView: UIImageView!
+final class CardView: SwipeableView {
+  @IBOutlet weak var photoImageView: UIImageView!
   @IBOutlet weak var forDistanceView: UIView!
   @IBOutlet weak var forLocationView: UIView!
   @IBOutlet weak var fullNameLabel: UILabel!
@@ -23,22 +23,22 @@ class CardView: SwipeableView {
   @IBOutlet weak var centralImageView: UIImageView!
   
   public struct State {
-      let fullName: String?
-      let distance: String?
-      let location: String?
-      let isOnline: Bool
-      let imagePath: String?
-      
-      init(fullName: String?,
-           distance: String?,
-           location: String?,
-           isOnline: Bool,
-           imagePath: String?) {
-          self.fullName = fullName
-          self.distance = distance
-          self.location = location
-          self.isOnline = isOnline
-          self.imagePath = imagePath
+    let fullName: String?
+    let distance: String?
+    let location: String?
+    let isOnline: Bool
+    let imagePath: String?
+    
+    init(fullName: String?,
+         distance: String?,
+         location: String?,
+         isOnline: Bool,
+         imagePath: String?) {
+      self.fullName = fullName
+      self.distance = distance
+      self.location = location
+      self.isOnline = isOnline
+      self.imagePath = imagePath
     }
   }
   
@@ -47,47 +47,28 @@ class CardView: SwipeableView {
       configureCentralView(swipeDirection: direction)
     }
   }
-    
-    public var state: State? {
-      didSet {
-        configure()
-      }
+  
+  public var state: State? {
+    didSet {
+      configure()
     }
-  
-  /// Shadow View
-  private weak var shadowView: UIView?
-  
-  /// Inner Margin
-  private static let kInnerMargin: CGFloat = 20.0
+  }
   
   override func awakeFromNib() {
     super.awakeFromNib()
     setupUI()
   }
-  
-  private func applyShadow(width: CGFloat, height: CGFloat) {
-    if let shadowView = shadowView {
-      let shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 14.0)
-      shadowView.layer.masksToBounds = false
-      shadowView.layer.shadowRadius = 8.0
-      shadowView.layer.shadowColor = UIColor.black.cgColor
-      shadowView.layer.shadowOffset = CGSize(width: width, height: height)
-      shadowView.layer.shadowOpacity = 0.15
-      shadowView.layer.shadowPath = shadowPath.cgPath
-    }
-  }
 }
 
 private extension CardView {
-  
   func setupUI() {
-    //    backgroundColor = myGreyColor
-    //    layer.cornerRadius = 14
-    //    centralView.applyStyle()
-    
+    forDistanceView.layer.cornerRadius = 14
+    forDistanceView.backgroundColor = myGreyColor
+    forLocationView.layer.cornerRadius = 14
+    forLocationView.backgroundColor = myGreyColor
     centralContentView.backgroundColor = .clear
     backgroundColor = .clear
-    fotoImageView.layer.cornerRadius = 14
+    photoImageView.layer.cornerRadius = 14
     centralContentView.layer.cornerRadius = 14
     centralView.applyStyle()
     statusView.layer.cornerRadius = statusView.frame.size.height / 2
@@ -100,8 +81,8 @@ private extension CardView {
     distanceLabel.text = state?.distance
     locationLabel.text = state?.location
     statusView.backgroundColor = state?.isOnline ?? false ? .green : .red
-    fotoImageView.sd_setImage(with: URL(string: state?.imagePath ?? ""),
-                              placeholderImage: UIImage(named: "avatar"))
+    photoImageView.sd_setImage(with: URL(string: state?.imagePath ?? ""),
+                               placeholderImage: UIImage(named: "avatar"))
   }
   
   func configureCentralView(swipeDirection: SwipeDirection) {

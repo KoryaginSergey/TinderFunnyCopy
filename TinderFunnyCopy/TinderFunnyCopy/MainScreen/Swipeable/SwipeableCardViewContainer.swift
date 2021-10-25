@@ -16,13 +16,11 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
       reloadData()
     }
   }
-  
   var delegate: SwipeableCardViewDelegate?
   private var cardViews: [SwipeableView] = []
   private var visibleCardViews: [SwipeableView] {
     return subviews as? [SwipeableView] ?? []
   }
-  
   fileprivate var remainingCards: Int = 0
   static let numberOfVisibleCards: Int = 3
   
@@ -103,8 +101,8 @@ extension SwipeableCardViewContainer {
   }
   
   func didChangeDirection(direction: SwipeDirection) {
-    guard let card1 = self.cardViews.first else { return }
-    guard let card = card1 as? CardView else { return }
+    guard let cardFirst = self.cardViews.first else { return }
+    guard let card = cardFirst as? CardView else { return }
     card.direction = direction
   }
   
