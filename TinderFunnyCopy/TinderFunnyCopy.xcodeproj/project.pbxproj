@@ -24,6 +24,7 @@
 		843D4B7327183518006ECDBA /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6B27183518006ECDBA /* MainScreenView.swift */; };
 		843D4B7427183518006ECDBA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6C27183518006ECDBA /* MainScreenViewController.swift */; };
 		843D4B7A271845D8006ECDBA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B79271845D7006ECDBA /* UIView+Extensions.swift */; };
+		846C33CB2727FE110077DEE1 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33CA2727FE100077DEE1 /* CLLocation+Extensions.swift */; };
 		84DAE2A227189130005DCC98 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2A12718912F005DCC98 /* Colors.swift */; };
 		84DAE2BB2721870F005DCC98 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2BA2721870F005DCC98 /* SwipeableView.swift */; };
 		84DAE2BF272187A6005DCC98 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */; };
@@ -56,6 +57,7 @@
 		843D4B6B27183518006ECDBA /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		843D4B6C27183518006ECDBA /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		843D4B79271845D7006ECDBA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		846C33CA2727FE100077DEE1 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 		84DAE2A12718912F005DCC98 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		84DAE2BA2721870F005DCC98 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				843D4B79271845D7006ECDBA /* UIView+Extensions.swift */,
 				634DD9412726BE4700F8CD92 /* Result+Extensions.swift */,
+				846C33CA2727FE100077DEE1 /* CLLocation+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				6339195627199E4D00CE1AFB /* Models.swift in Sources */,
 				634DD9422726BE4700F8CD92 /* Result+Extensions.swift in Sources */,
+				846C33CB2727FE110077DEE1 /* CLLocation+Extensions.swift in Sources */,
 				843D4B7A271845D8006ECDBA /* UIView+Extensions.swift in Sources */,
 				84DAE2C527218836005DCC98 /* CGPoint+SwipeableAdditions.swift in Sources */,
 				84DAE2C2272187DA005DCC98 /* SwipeDirection.swift in Sources */,

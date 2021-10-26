@@ -77,6 +77,7 @@ extension MainScreenViewController: MainScreenModelDelegate {
   }
 }
 
+// MARK: - SwipeableCardViewDataSource
 extension MainScreenViewController: SwipeableCardViewDataSource {
   func numberOfCards() -> Int {
     modelUsers.count
@@ -97,6 +98,7 @@ extension MainScreenViewController: SwipeableCardViewDataSource {
   }
 }
 
+// MARK: - SwipeableCardViewDelegate
 extension MainScreenViewController: SwipeableCardViewDelegate {
   func didSelect(card: SwipeableView, atIndex index: Int) { }
   
@@ -109,11 +111,4 @@ extension MainScreenViewController: SwipeableCardViewDelegate {
   }
 }
 
-private extension CLLocation {
-  func distanceKm(to location: CLLocation?) -> String? {
-    guard let location = location else { return nil }
-    let kmDistance: Int = Int(self.distance(from: location) / 1000)
-    return "\(kmDistance)km away"
-  }
-}
 

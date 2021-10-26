@@ -76,11 +76,15 @@ class SwipeableView: UIView {
     switch gestureRecognizer.state {
     case .began:
       let initialTouchPoint = gestureRecognizer.location(in: self)
-      let newAnchorPoint = CGPoint(x: initialTouchPoint.x / bounds.width, y: initialTouchPoint.y / bounds.height)
-      let oldPosition = CGPoint(x: bounds.size.width * layer.anchorPoint.x, y: bounds.size.height * layer.anchorPoint.y)
-      let newPosition = CGPoint(x: bounds.size.width * newAnchorPoint.x, y: bounds.size.height * newAnchorPoint.y)
+      let newAnchorPoint = CGPoint(x: initialTouchPoint.x / bounds.width,
+                                   y: initialTouchPoint.y / bounds.height)
+      let oldPosition = CGPoint(x: bounds.size.width * layer.anchorPoint.x,
+                                y: bounds.size.height * layer.anchorPoint.y)
+      let newPosition = CGPoint(x: bounds.size.width * newAnchorPoint.x,
+                                y: bounds.size.height * newAnchorPoint.y)
       layer.anchorPoint = newAnchorPoint
-      layer.position = CGPoint(x: layer.position.x - oldPosition.x + newPosition.x, y: layer.position.y - oldPosition.y + newPosition.y)
+      layer.position = CGPoint(x: layer.position.x - oldPosition.x + newPosition.x,
+                               y: layer.position.y - oldPosition.y + newPosition.y)
       removeAnimations()
       layer.rasterizationScale = UIScreen.main.scale
       layer.shouldRasterize = true

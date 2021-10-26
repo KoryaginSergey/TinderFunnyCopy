@@ -11,6 +11,13 @@ import SDWebImage
 
 
 final class CardView: SwipeableView {
+  
+  struct Defaults {
+    struct View {
+      static let viewCornerRadius: CGFloat = 14
+    }
+  }
+  
   @IBOutlet weak var photoImageView: UIImageView!
   @IBOutlet weak var forDistanceView: UIView!
   @IBOutlet weak var forLocationView: UIView!
@@ -62,14 +69,14 @@ final class CardView: SwipeableView {
 
 private extension CardView {
   func setupUI() {
-    forDistanceView.layer.cornerRadius = 14
+    forDistanceView.layer.cornerRadius = Defaults.View.viewCornerRadius
     forDistanceView.backgroundColor = myGreyColor
-    forLocationView.layer.cornerRadius = 14
+    forLocationView.layer.cornerRadius = Defaults.View.viewCornerRadius
     forLocationView.backgroundColor = myGreyColor
     centralContentView.backgroundColor = .clear
     backgroundColor = .clear
-    photoImageView.layer.cornerRadius = 14
-    centralContentView.layer.cornerRadius = 14
+    photoImageView.layer.cornerRadius = Defaults.View.viewCornerRadius
+    centralContentView.layer.cornerRadius = Defaults.View.viewCornerRadius
     centralView.applyStyle()
     statusView.layer.cornerRadius = statusView.frame.size.height / 2
     centralView.layer.cornerRadius = centralView.frame.height / 2
