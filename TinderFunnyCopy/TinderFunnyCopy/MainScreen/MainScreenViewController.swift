@@ -10,12 +10,13 @@ import CoreLocation
 
 
 // MARK: - MainScreenViewController
-class MainScreenViewController: UIViewController {
+final class MainScreenViewController: UIViewController {
   var model: MainScreenModelProtocol
   var modelUsers: [Result] = []
   let locationManager = LocationManager()
   var location: CLLocation?
   var page = Page(page: 1, results: 5)
+  var isFetching: Bool = true
   fileprivate var tempView: MainScreenViewProtocol?
   var customView: MainScreenViewProtocol! {
     return self.view as? MainScreenViewProtocol
@@ -53,7 +54,9 @@ class MainScreenViewController: UIViewController {
   }
   
   func fetchNewData() {
+    isFetching = true
     PostServices.shared.fetchRequest(page: page) { [weak self] model in
+      self?.isFetching = false
       self?.modelUsers.append(contentsOf: model.results ?? [])
       self?.customView.contentView.reloadData()
     }
@@ -63,11 +66,15 @@ class MainScreenViewController: UIViewController {
 // MARK: - MainScreenViewDelegate
 extension MainScreenViewController: MainScreenViewDelegate {
   func viewLikeAction(view: MainScreenViewProtocol) {
-    customView.contentView.swipeAction(direction: .right)
+    if !isFetching {
+      customView.contentView.swipeAction(direction: .right)
+    }
   }
   
   func viewDissLikeAction(view: MainScreenViewProtocol) {
-    customView.contentView.swipeAction(direction: .left)
+    if !isFetching {
+      customView.contentView.swipeAction(direction: .left)
+    }
   }
 }
 
@@ -104,8 +111,8 @@ extension MainScreenViewController: SwipeableCardViewDelegate {
   
   func didRemoveFirst() {
     self.modelUsers.removeFirst()
-    if self.modelUsers.count == 3 {
-      self.page.page = 2
+    if self.modelUsers.count == SwipeableCardViewContainer.numberOfVisibleCards {
+      self.page.page += 1
       self.fetchNewData()
     }
   }
