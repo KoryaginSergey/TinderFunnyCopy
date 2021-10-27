@@ -12,11 +12,6 @@ import CoreLocation
 // MARK: - MainScreenViewController
 final class MainScreenViewController: UIViewController {
   var model: MainScreenModelProtocol
-  var modelUsers: [Result] = []
-  let locationManager = LocationManager()
-  var location: CLLocation?
-  var page = Page(page: 1, results: 5)
-  var isFetching: Bool = true
   fileprivate var tempView: MainScreenViewProtocol?
   var customView: MainScreenViewProtocol! {
     return self.view as? MainScreenViewProtocol
@@ -46,33 +41,21 @@ final class MainScreenViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.customView.delegate = self
-    fetchNewData()
-    self.locationManager.currentLocationRequest { [weak self] location in
-      self?.location = location
-      self?.customView.contentView.reloadData()
-    }
-  }
-  
-  func fetchNewData() {
-    isFetching = true
-    PostServices.shared.fetchRequest(page: page) { [weak self] model in
-      self?.isFetching = false
-      self?.modelUsers.append(contentsOf: model.results ?? [])
-      self?.customView.contentView.reloadData()
-    }
+    model.requestLocation()
+    model.fetch()
   }
 }
 
 // MARK: - MainScreenViewDelegate
 extension MainScreenViewController: MainScreenViewDelegate {
   func viewLikeAction(view: MainScreenViewProtocol) {
-    if !isFetching {
+    if !model.isFetching {
       customView.contentView.swipeAction(direction: .right)
     }
   }
   
   func viewDissLikeAction(view: MainScreenViewProtocol) {
-    if !isFetching {
+    if !model.isFetching {
       customView.contentView.swipeAction(direction: .left)
     }
   }
@@ -81,20 +64,21 @@ extension MainScreenViewController: MainScreenViewDelegate {
 // MARK: - MainScreenModelDelegate
 extension MainScreenViewController: MainScreenModelDelegate {
   func modelDidChanged(model: MainScreenModelProtocol) {
+    customView.contentView.reloadData()
   }
 }
 
 // MARK: - SwipeableCardViewDataSource
 extension MainScreenViewController: SwipeableCardViewDataSource {
   func numberOfCards() -> Int {
-    modelUsers.count
+    model.modelUsers.count
   }
   
   func card(forItemAtIndex index: Int) -> SwipeableView {
-    let person = modelUsers[index]
+    let person = model.modelUsers[index]
     let card: CardView = CardView.create()
     card.state = .init(fullName: person.fullNameAndAge(),
-                       distance: person.locationObject()?.distanceKm(to: self.location),
+                       distance: person.locationObject()?.distanceKm(to: model.location),
                        location: person.locationName(), isOnline: true,
                        imagePath: person.picture?.large)
     return card
@@ -110,10 +94,9 @@ extension MainScreenViewController: SwipeableCardViewDelegate {
   func didSelect(card: SwipeableView, atIndex index: Int) { }
   
   func didRemoveFirst() {
-    self.modelUsers.removeFirst()
-    if self.modelUsers.count == SwipeableCardViewContainer.numberOfVisibleCards {
-      self.page.page += 1
-      self.fetchNewData()
+    model.removeFirst()
+    if model.modelUsers.count == SwipeableCardViewContainer.numberOfVisibleCards {
+      model.fetch()
     }
   }
 }
