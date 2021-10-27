@@ -22,7 +22,7 @@ class SwipeableView: UIView {
   static var maximumRotation: CGFloat = 1.0
   static var rotationAngle: CGFloat = CGFloat(Double.pi) / 10.0
   static var animationDirectionY: CGFloat = 1.0
-  static var swipePercentageMargin: CGFloat = 0.6
+  static var swipePercentageMargin: CGFloat = 0.5
   
   // MARK: Card Finalize Swipe Animation
   static var finalizeSwipeActionAnimationDuration: Double = 0.8
