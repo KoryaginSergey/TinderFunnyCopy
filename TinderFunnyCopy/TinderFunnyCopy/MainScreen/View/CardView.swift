@@ -70,9 +70,9 @@ final class CardView: SwipeableView {
 private extension CardView {
   func setupUI() {
     forDistanceView.layer.cornerRadius = Defaults.View.viewCornerRadius
-    forDistanceView.backgroundColor = myGreyColor
+    forDistanceView.backgroundColor = UIColor.myGreyColor
     forLocationView.layer.cornerRadius = Defaults.View.viewCornerRadius
-    forLocationView.backgroundColor = myGreyColor
+    forLocationView.backgroundColor = UIColor.myGreyColor
     centralContentView.backgroundColor = .clear
     backgroundColor = .clear
     photoImageView.layer.cornerRadius = Defaults.View.viewCornerRadius
@@ -98,8 +98,8 @@ private extension CardView {
       return
     }
     centralContentView.isHidden = false
-    centralContentView.backgroundColor = swipeDirection == .left ? myBlueColor.withAlphaComponent(0.2) : myRedColor.withAlphaComponent(0.2)
-    centralView.backgroundColor = swipeDirection == .left ? myBlueColor : myRedColor
+    centralContentView.backgroundColor = swipeDirection == .left ? UIColor.myBlueColor.withAlphaComponent(0.2) : UIColor.myRedColor.withAlphaComponent(0.2)
+    centralView.backgroundColor = swipeDirection == .left ? UIColor.myBlueColor : UIColor.myRedColor
     centralImageView.image = swipeDirection == .left ? UIImage(named: "Cross")?.withTintColor(.white) : UIImage(named: "Heart")?.withTintColor(.white)
   }
 }

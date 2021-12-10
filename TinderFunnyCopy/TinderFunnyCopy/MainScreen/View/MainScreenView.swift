@@ -58,7 +58,7 @@ private extension MainScreenView {
     dissLikeButton.applyStyle()
     dissLikeButton.setImage(UIImage(named: "CrossBig"), for: .normal)
     likeButton.applyStyle()
-    likeButton.backgroundColor = myRedColor
+    likeButton.backgroundColor = UIColor.myRedColor
     likeButton.setImage(UIImage(named: "HeartBig")?.withTintColor(.white), for: .normal)
     titleLabel.text = "Discover"
   }

@@ -11,6 +11,7 @@
 		63340D3E2720649F00312EC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63340D3D2720649F00312EC0 /* LocationManager.swift */; };
 		6339195627199E4D00CE1AFB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339195527199E4D00CE1AFB /* Models.swift */; };
 		633C2582271DA01800193CE0 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C2581271DA01800193CE0 /* PostServices.swift */; };
+		633C312427637F650026B527 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C312327637F650026B527 /* UIColor+Extensions.swift */; };
 		634DD93F2726BA4C00F8CD92 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 634DD93E2726BA4C00F8CD92 /* SDWebImage */; };
 		634DD9422726BE4700F8CD92 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634DD9412726BE4700F8CD92 /* Result+Extensions.swift */; };
 		635387D22716FD73002A67C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635387D12716FD73002A67C7 /* AppDelegate.swift */; };
@@ -25,7 +26,6 @@
 		843D4B7427183518006ECDBA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B6C27183518006ECDBA /* MainScreenViewController.swift */; };
 		843D4B7A271845D8006ECDBA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D4B79271845D7006ECDBA /* UIView+Extensions.swift */; };
 		846C33CB2727FE110077DEE1 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33CA2727FE100077DEE1 /* CLLocation+Extensions.swift */; };
-		84DAE2A227189130005DCC98 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2A12718912F005DCC98 /* Colors.swift */; };
 		84DAE2BB2721870F005DCC98 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2BA2721870F005DCC98 /* SwipeableView.swift */; };
 		84DAE2BF272187A6005DCC98 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */; };
 		84DAE2C2272187DA005DCC98 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAE2C1272187DA005DCC98 /* SwipeDirection.swift */; };
@@ -43,6 +43,7 @@
 		63340D3D2720649F00312EC0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6339195527199E4D00CE1AFB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		633C2581271DA01800193CE0 /* PostServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
+		633C312327637F650026B527 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		634DD9412726BE4700F8CD92 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		635387CE2716FD73002A67C7 /* TinderFunnyCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderFunnyCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635387D12716FD73002A67C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		843D4B6C27183518006ECDBA /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		843D4B79271845D7006ECDBA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		846C33CA2727FE100077DEE1 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
-		84DAE2A12718912F005DCC98 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		84DAE2BA2721870F005DCC98 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		84DAE2BE272187A6005DCC98 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
 		84DAE2C1272187DA005DCC98 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 				635387DA2716FD74002A67C7 /* Assets.xcassets */,
 				635387DC2716FD74002A67C7 /* LaunchScreen.storyboard */,
 				635387DF2716FD74002A67C7 /* Info.plist */,
-				84DAE2A12718912F005DCC98 /* Colors.swift */,
 			);
 			path = TinderFunnyCopy;
 			sourceTree = "<group>";
@@ -178,6 +177,7 @@
 				843D4B79271845D7006ECDBA /* UIView+Extensions.swift */,
 				634DD9412726BE4700F8CD92 /* Result+Extensions.swift */,
 				846C33CA2727FE100077DEE1 /* CLLocation+Extensions.swift */,
+				633C312327637F650026B527 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -339,7 +339,6 @@
 				84DAE2CB272188BB005DCC98 /* UIView+Constraints.swift in Sources */,
 				84DAE2D12721894A005DCC98 /* SwipeableCardViewDataSource.swift in Sources */,
 				635387D22716FD73002A67C7 /* AppDelegate.swift in Sources */,
-				84DAE2A227189130005DCC98 /* Colors.swift in Sources */,
 				84DAE2BB2721870F005DCC98 /* SwipeableView.swift in Sources */,
 				84DAE2BF272187A6005DCC98 /* SwipeableViewDelegate.swift in Sources */,
 				843D4B6D27183518006ECDBA /* MainScreenModel.swift in Sources */,
@@ -348,6 +347,7 @@
 				84DAE2C82721887E005DCC98 /* CGRect+SwipeAdditions.swift in Sources */,
 				635387D42716FD73002A67C7 /* SceneDelegate.swift in Sources */,
 				84DAE2D92721927E005DCC98 /* CardView.swift in Sources */,
+				633C312427637F650026B527 /* UIColor+Extensions.swift in Sources */,
 				843D4B7327183518006ECDBA /* MainScreenView.swift in Sources */,
 				843D4B7427183518006ECDBA /* MainScreenViewController.swift in Sources */,
 				84DAE2CE27218903005DCC98 /* SwipeableCardViewContainer.swift in Sources */,
